@@ -1,0 +1,351 @@
+$main-background-color: #EaE7DC;
+$sub-background-color: #D8C3A5;
+$main-font-color: #665e5e;
+$highlight-color: #E85A4F;
+$sub-color: #E98074;
+$cus-radius: 0.5em;
+
+html{
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+body {
+    background-color: $main-background-color;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: $main-font-color;
+}
+
+header {
+    padding: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: $main-background-color;
+    border-radius: $cus-radius;
+    background-color: $highlight-color;
+    position: relative;
+    #btnAdminLogout{
+        font-size : 18px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        transform: (-50%, -50%);
+        right : 10%;
+        bottom : 30%;
+    }
+    #btnAdminLogout:hover{
+       cursor: pointer;
+    }
+}
+
+.subTitle {
+    font-weight: bold;
+    margin-right: 1em;
+}
+//button style
+button {
+    background-color: $sub-color;
+    color: $main-background-color;
+    border: 0;
+    border-radius: $cus-radius;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 1rem;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: $highlight-color;
+    cursor: pointer;
+}
+
+//input style
+input[type="radio"] {
+    cursor: pointer;
+    width: 1.5em;
+    margin-right: 1em;
+}
+
+input[type="radio"]:checked {
+    cursor: pointer;
+    accent-color: $highlight-color;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    cursor: pointer;
+    border: 0;
+    border: 1px solid $sub-background-color;
+    border-radius: $cus-radius;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.5em;
+    width: 8em;
+    height: 2em;
+    color: $main-font-color;
+}
+
+input[type="text"]:focus,
+input[type="password"],
+input[type="number"]:focus {
+    outline: none !important;
+    border: 2px solid $highlight-color;
+}
+
+select {
+    cursor: pointer;
+    border: 0;
+    border: 1px solid $sub-background-color;
+    border-radius: $cus-radius;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    padding: 0.5em;
+    width: fit-content;
+    color: $main-font-color;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+
+    section {
+        margin-top: 1em;
+
+        .newAccount {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+        .transferWrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 3em;
+            .newTransfer {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8em;
+                border: 1px solid $sub-background-color;
+                border-radius: $cus-radius;
+                padding: 2em;
+                .radioWrap {
+                    display: flex;
+                }
+                .transferInput{
+                    display: flex;
+                    .from, .to{
+                        display: none;
+                    }
+
+                }
+                .categoryWrap{
+                    display: flex;
+                    gap:0.5em;
+                    align-items: center;
+                    .category{
+                        display: flex;
+                    }
+                }
+                .addTransaction{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap:0.8em;
+                    .inputWrapper{
+                        display: flex;
+                        flex-direction: row;
+                    }
+                }
+            }
+            .accountSummary {
+                width: 50%;
+                .subTitle{
+                    padding: 1em;
+                    font-size: 1.3em;
+                }
+            }
+        }
+        .tableWrapper {
+            margin-top: 2em;
+
+            .tableHeader {
+                margin-bottom: 1em;
+                display: flex;
+            }
+        }
+    }
+}
+
+
+table {
+    width: 100%;
+    text-align: center;
+    tr {
+        th {
+            background-color: $sub-color;
+            color: $main-background-color;
+            padding: 0.5em;
+            font-weight: 900;
+        }
+        td{
+            border: 1px solid $sub-background-color;
+            padding: 0.5em;
+        }
+    }
+}
+.logo{
+    margin-top: 2em;
+    text-align: center;
+    img{
+    width: 7em;
+    height:7em; 
+    }
+}
+
+#snackbar {
+    display: none;
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
+    border-radius: 2px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 30px; 
+}
+  
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+@media only screen and (max-width: 540px) {
+    html{
+       width: 375px;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+    
+    body {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    header {
+        font-size:18px;
+        #btnAdminLogout{
+            div{
+                display: none;
+            }
+        }
+
+    }
+    //button style
+    button {
+        padding: 0.7em;
+        font-size: 14px;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+        width: 6em;
+        height: 1.5em;
+        font-size: 14px;
+        padding: 0.5em;
+        
+    }
+    main {
+        padding: 0;
+        section {
+            margin-top: 1em;
+            .newAccount {
+                justify-content: center;
+            }
+            .transferWrapper {
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                .newTransfer {
+                    width: 92%;
+                    flex-direction: column;
+                    gap: 0.8em;
+                    padding: 0.5em;
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+                    .radioWrap {
+                        flex-direction: column;
+                    }
+                    .transferInput{
+                        justify-content: center;
+                    }
+                    .categoryWrap{
+                        display: flex;
+                        flex-direction: column;
+                        gap:0.5em;
+                        .category{
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            justify-content: center;
+                        }
+                        .newCategory{
+                            display: none;
+                        }
+                    }
+                    .addTransaction{
+                        display: flex;
+                        flex-direction: column;
+                        gap:0.5em;
+                       align-items: center;
+                    
+                    }
+                }
+                .accountSummary {
+                    width: 100%;
+                    .subTitle{
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .tableWrapper {
+                margin-top: 0;
+                .tableHeader {
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    table {
+        width: 100%;
+        text-align: center;
+        tr {
+            .hidden_mobile{
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,293 @@
+@import "index.scss";
+
+$user-highlight-color : #141E46;
+$user-main-color : #BB2525;
+$user-sub-color : #FF6969;
+$user-light-color : #FFF5E0;
+
+.mainWrap {
+    display: flex;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    .user-left-side {
+        display: flex;
+        flex-direction: column;
+        height: 800px;
+        gap: 1em;
+        width: 25%;
+        padding-top: 3em;
+        padding-left: 2em;
+        background-color: $highlight-color;
+        color: $main-background-color;
+        border-top-left-radius: $cus-radius;
+        border-bottom-left-radius: $cus-radius;
+        font-size: 1.3em;
+
+        .menu-item:hover {
+            cursor: pointer;
+        }
+    }
+
+    .user-right-side {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+
+        .infoHead {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            color: $main-background-color;
+            background-color: $sub-color;
+            border-top-right-radius: $cus-radius;
+            border-bottom-right-radius: $cus-radius;
+            position : relative;
+            .logoSection {
+                width: 20%;
+                padding: 0.2em;
+
+                img {
+                    width: 50%;
+                    height: auto;
+
+                }
+            }
+
+            .userInfo {
+                width: 80%;
+                font-size : 25px;
+                text-align: left;
+            }
+            #btnLogout{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                transform: (-50%, -50%);
+                right : 10%;
+            }
+            #btnLogout:hover{
+               cursor: pointer;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .infoWindow {
+            padding-left: 2em;
+            margin-top: 2em;
+            .infoDashboard {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+
+                .dash_total {
+                    font-size: 30px;
+                }
+
+                .dash_accountBar {
+                    display: flex;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 1em;
+                }
+
+                .tb_recentTrans {
+                    margin-top: 1em;
+                    font-size: 16px;
+                }
+
+            }
+
+            .infoTransfer {
+                display: none;
+            }
+
+            .infoTransaction {
+                display: none;
+            }
+
+            .infoAccount {
+                display: none;
+            }
+        }
+
+        .infoTransfer {
+            box-shadow: $highlight-color -5px 5px, #ee746b -10px 10px, #f8b5b0 -15px 15px, #fce0de -20px 20px, #fff6f6 -25px 25px;
+            padding: 5em;
+            margin-left:3em;
+            margin-right:3em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: $sub-color;
+            gap: 3em;
+            color: white;
+            .userTransferItem {
+                display: flex;
+                padding-top: 1.5em;
+                align-items: center;
+
+                div {
+                    width: 25%;
+                    text-align: right;
+                    padding-right: 1em;
+                }
+
+                select,
+                input {
+                    width: 75%;
+                    text-align: center;
+                }
+            }
+
+            button {
+                background-color: $highlight-color;
+                margin-top: 2em;
+
+            }
+
+            button:hover {
+                background-color: $user-main-color;
+            }
+        }
+
+        .infoTransaction {
+            margin-bottom: 1em;
+
+            div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                select {
+                    min-width: 200px;
+                }
+            }
+
+            .tb_userTrans {
+                margin-top: 1em;
+            }
+        }
+        .infoAccount{
+            .subTitle{
+                font-size: 30px;
+                margin-bottom: 1em;
+            }
+            .tb_userAccountSummary{
+                margin-bottom: 1em;
+            }
+            div{
+                text-align: center;
+            }
+        }
+
+
+    }
+}
+
+
+
+//google icon
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+
+@media only screen and (max-width: 540px) {
+
+    .mainWrap {
+        display: flex;
+        margin-left: 0;
+        margin-right: 0;
+
+        .user-left-side {
+            display: none;
+        }
+
+        .user-right-side {
+            width: 100%;
+
+            .infoHead {
+                border-top-right-radius: $cus-radius;
+                border-top-left-radius: $cus-radius;
+                border-bottom-right-radius: 0;
+                padding: 1em;
+
+
+            }
+
+            .mobile-menu {
+                display: flex;
+                background-color: $highlight-color;
+                justify-content: space-between;
+                color: $main-background-color;
+                padding: 1em;
+                padding-left: 4em;
+                padding-right: 4em;
+
+                .menu-item:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .infoWindow {
+                margin-top:1em;
+                padding-left: 0;
+                .infoDashboard {
+                    text-align: center;
+                    .dash_total {
+                        font-size: 18px;
+                    }
+                    .tb_recentTrans {
+                        font-size: 14px;
+                    }
+                }
+
+                .infoTransfer {
+                    box-shadow: $highlight-color -5px 5px;
+                    padding: 1em;
+                    padding-top: 2em;
+                    padding-bottom: 2em;
+                    margin-left: 1em;
+                    margin-right: 0.5em;
+                    gap: 1em;
+
+                    .userTransferItem {
+                        align-items: left;
+                        padding-left: 1em;
+                        padding-right: 1em;
+
+                        div {
+                            width: 35%;
+                            text-align: center;
+                        }
+
+                        select,
+                        input {
+                            width: 65%;
+                        }
+                    }
+                }
+                .infoAccount{
+                    .subTitle{
+                        font-size: 18px;
+                    }
+        
+                }
+
+            }
+        }
+    }
+}

@@ -1,0 +1,533 @@
+html {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+body {
+  background-color: #EaE7DC;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #665e5e;
+}
+
+header {
+  padding: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #EaE7DC;
+  border-radius: 0.5em;
+  background-color: #E85A4F;
+  position: relative;
+}
+
+.subTitle {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+button {
+  background-color: #E98074;
+  color: #EaE7DC;
+  border: 0;
+  border-radius: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #E85A4F;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  cursor: pointer;
+  width: 1.5em;
+  margin-right: 1em;
+}
+
+input[type=radio]:checked {
+  cursor: pointer;
+  accent-color: #E85A4F;
+}
+
+input[type=text],
+input[type=password],
+input[type=number] {
+  cursor: pointer;
+  border: 0;
+  border: 1px solid #D8C3A5;
+  border-radius: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.5em;
+  width: 8em;
+  height: 2em;
+  color: #665e5e;
+}
+
+input[type=text]:focus,
+input[type=password],
+input[type=number]:focus {
+  outline: none !important;
+  border: 2px solid #E85A4F;
+}
+
+select {
+  cursor: pointer;
+  border: 0;
+  border: 1px solid #D8C3A5;
+  border-radius: 0.5em;
+  margin-left: 1em;
+  margin-right: 0.5em;
+  padding: 0.5em;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #665e5e;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+main section {
+  margin-top: 1em;
+}
+main section .newAccount {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+main section .transferWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+main section .transferWrapper .newTransfer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  border: 1px solid #D8C3A5;
+  border-radius: 0.5em;
+  padding: 2em;
+}
+main section .transferWrapper .newTransfer .radioWrap {
+  display: flex;
+}
+main section .transferWrapper .newTransfer .transferInput {
+  display: flex;
+}
+main section .transferWrapper .newTransfer .transferInput .from, main section .transferWrapper .newTransfer .transferInput .to {
+  display: none;
+}
+main section .transferWrapper .newTransfer .categoryWrap {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+main section .transferWrapper .newTransfer .categoryWrap .category {
+  display: flex;
+}
+main section .transferWrapper .newTransfer .addTransaction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8em;
+}
+main section .transferWrapper .newTransfer .addTransaction .inputWrapper {
+  display: flex;
+  flex-direction: row;
+}
+main section .transferWrapper .accountSummary {
+  width: 50%;
+}
+main section .transferWrapper .accountSummary .subTitle {
+  padding: 1em;
+  font-size: 1.3em;
+}
+main section .tableWrapper {
+  margin-top: 2em;
+}
+main section .tableWrapper .tableHeader {
+  margin-bottom: 1em;
+  display: flex;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+table tr th {
+  background-color: #E98074;
+  color: #EaE7DC;
+  padding: 0.5em;
+  font-weight: 900;
+}
+table tr td {
+  border: 1px solid #D8C3A5;
+  padding: 0.5em;
+}
+
+.logo {
+  margin-top: 2em;
+  text-align: center;
+}
+.logo img {
+  width: 7em;
+  height: 7em;
+}
+
+#snackbar {
+  display: none;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+@media only screen and (max-width: 540px) {
+  html {
+    width: 375px;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+  body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  button {
+    padding: 0.7em;
+    font-size: 14px;
+  }
+  input[type=text],
+  input[type=number] {
+    width: 6em;
+    height: 1.5em;
+    font-size: 14px;
+    padding: 0.5em;
+  }
+  main {
+    padding: 0;
+  }
+  main section {
+    margin-top: 1em;
+  }
+  main section .newAccount {
+    justify-content: center;
+  }
+  main section .transferWrapper {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  main section .transferWrapper .newTransfer {
+    width: 92%;
+    flex-direction: column;
+    gap: 0.8em;
+    padding: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  main section .transferWrapper .newTransfer .radioWrap {
+    flex-direction: column;
+  }
+  main section .transferWrapper .newTransfer .transferInput {
+    justify-content: center;
+  }
+  main section .transferWrapper .newTransfer .categoryWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  main section .transferWrapper .newTransfer .categoryWrap .category {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  main section .transferWrapper .newTransfer .categoryWrap .newCategory {
+    display: none;
+  }
+  main section .transferWrapper .newTransfer .addTransaction {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+  main section .transferWrapper .accountSummary {
+    width: 100%;
+  }
+  main section .transferWrapper .accountSummary .subTitle {
+    text-align: center;
+    font-size: 14px;
+  }
+  main section .tableWrapper {
+    margin-top: 0;
+  }
+  main section .tableWrapper .tableHeader {
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    width: 100%;
+    text-align: center;
+  }
+  table tr .hidden_mobile {
+    display: none;
+  }
+}
+.mainWrap {
+  display: flex;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.mainWrap .user-left-side {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  gap: 1em;
+  width: 25%;
+  padding-top: 3em;
+  padding-left: 2em;
+  background-color: #E85A4F;
+  color: #EaE7DC;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  font-size: 1.3em;
+}
+.mainWrap .user-left-side .menu-item:hover {
+  cursor: pointer;
+}
+.mainWrap .user-right-side {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.mainWrap .user-right-side .infoHead {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  color: #EaE7DC;
+  background-color: #E98074;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  position: relative;
+}
+.mainWrap .user-right-side .infoHead .logoSection {
+  width: 20%;
+  padding: 0.2em;
+}
+.mainWrap .user-right-side .infoHead .logoSection img {
+  width: 50%;
+  height: auto;
+}
+.mainWrap .user-right-side .infoHead .userInfo {
+  width: 80%;
+  font-size: 25px;
+  text-align: left;
+}
+.mainWrap .user-right-side .infoHead #btnLogout {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transform: -50%, -50%;
+  right: 10%;
+}
+.mainWrap .user-right-side .infoHead #btnLogout:hover {
+  cursor: pointer;
+}
+.mainWrap .user-right-side .mobile-menu {
+  display: none;
+}
+.mainWrap .user-right-side .infoWindow {
+  padding-left: 2em;
+  margin-top: 2em;
+}
+.mainWrap .user-right-side .infoWindow .infoDashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.mainWrap .user-right-side .infoWindow .infoDashboard .dash_total {
+  font-size: 30px;
+}
+.mainWrap .user-right-side .infoWindow .infoDashboard .dash_accountBar {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.mainWrap .user-right-side .infoWindow .infoDashboard .tb_recentTrans {
+  margin-top: 1em;
+  font-size: 16px;
+}
+.mainWrap .user-right-side .infoWindow .infoTransfer {
+  display: none;
+}
+.mainWrap .user-right-side .infoWindow .infoTransaction {
+  display: none;
+}
+.mainWrap .user-right-side .infoWindow .infoAccount {
+  display: none;
+}
+.mainWrap .user-right-side .infoTransfer {
+  box-shadow: #E85A4F -5px 5px, #ee746b -10px 10px, #f8b5b0 -15px 15px, #fce0de -20px 20px, #fff6f6 -25px 25px;
+  padding: 5em;
+  margin-left: 3em;
+  margin-right: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #E98074;
+  gap: 3em;
+  color: white;
+}
+.mainWrap .user-right-side .infoTransfer .userTransferItem {
+  display: flex;
+  padding-top: 1.5em;
+  align-items: center;
+}
+.mainWrap .user-right-side .infoTransfer .userTransferItem div {
+  width: 25%;
+  text-align: right;
+  padding-right: 1em;
+}
+.mainWrap .user-right-side .infoTransfer .userTransferItem select,
+.mainWrap .user-right-side .infoTransfer .userTransferItem input {
+  width: 75%;
+  text-align: center;
+}
+.mainWrap .user-right-side .infoTransfer button {
+  background-color: #E85A4F;
+  margin-top: 2em;
+}
+.mainWrap .user-right-side .infoTransfer button:hover {
+  background-color: #BB2525;
+}
+.mainWrap .user-right-side .infoTransaction {
+  margin-bottom: 1em;
+}
+.mainWrap .user-right-side .infoTransaction div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.mainWrap .user-right-side .infoTransaction div select {
+  min-width: 200px;
+}
+.mainWrap .user-right-side .infoTransaction .tb_userTrans {
+  margin-top: 1em;
+}
+.mainWrap .user-right-side .infoAccount .subTitle {
+  font-size: 30px;
+  margin-bottom: 1em;
+}
+.mainWrap .user-right-side .infoAccount .tb_userAccountSummary {
+  margin-bottom: 1em;
+}
+.mainWrap .user-right-side .infoAccount div {
+  text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+@media only screen and (max-width: 540px) {
+  .mainWrap {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .mainWrap .user-left-side {
+    display: none;
+  }
+  .mainWrap .user-right-side {
+    width: 100%;
+  }
+  .mainWrap .user-right-side .infoHead {
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-bottom-right-radius: 0;
+    padding: 1em;
+  }
+  .mainWrap .user-right-side .mobile-menu {
+    display: flex;
+    background-color: #E85A4F;
+    justify-content: space-between;
+    color: #EaE7DC;
+    padding: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  .mainWrap .user-right-side .mobile-menu .menu-item:hover {
+    cursor: pointer;
+  }
+  .mainWrap .user-right-side .infoWindow {
+    margin-top: 1em;
+    padding-left: 0;
+  }
+  .mainWrap .user-right-side .infoWindow .infoDashboard {
+    text-align: center;
+  }
+  .mainWrap .user-right-side .infoWindow .infoDashboard .dash_total {
+    font-size: 18px;
+  }
+  .mainWrap .user-right-side .infoWindow .infoDashboard .tb_recentTrans {
+    font-size: 14px;
+  }
+  .mainWrap .user-right-side .infoWindow .infoTransfer {
+    box-shadow: #E85A4F -5px 5px;
+    padding: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    gap: 1em;
+  }
+  .mainWrap .user-right-side .infoWindow .infoTransfer .userTransferItem {
+    align-items: left;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .mainWrap .user-right-side .infoWindow .infoTransfer .userTransferItem div {
+    width: 35%;
+    text-align: center;
+  }
+  .mainWrap .user-right-side .infoWindow .infoTransfer .userTransferItem select,
+  .mainWrap .user-right-side .infoWindow .infoTransfer .userTransferItem input {
+    width: 65%;
+  }
+  .mainWrap .user-right-side .infoWindow .infoAccount .subTitle {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=user.css.map */

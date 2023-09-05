@@ -1,0 +1,88 @@
+@import "index.scss";
+
+
+.login{
+    display: flex;
+    margin-top:1em;
+    .empty-left, .empty-right{
+        width: 30%;
+    }
+    .loginSection{
+        width: 40%;
+        box-shadow: $highlight-color -5px 5px, #ee746b -10px 10px,  #f8b5b0 -15px 15px,  #fce0de -20px 20px, #fff6f6 -25px 25px;
+        padding-top:7em;
+        padding-bottom:10em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $sub-color;
+        gap: 1em;
+        color: white;
+        .loginlogo{
+            width: 50%;
+            text-align: center;
+            img{
+                width:70%;
+            }
+        }
+        .loginWrapper{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 2em;
+            margin: auto;
+            .inputWrapper{
+                display: flex;
+                div, input{
+                    width: 50%;
+                }
+                input{
+                    cursor: pointer;
+                    border: 0;
+                    border: 1px solid $sub-background-color;
+                    border-radius: $cus-radius;
+                    margin-left: 0.5em;
+                    margin-right: 0.5em;
+                    padding: 0.5em;
+                    color: $main-font-color;
+                }
+                input:focus {
+                    outline: none !important;
+                    border: 2px solid $highlight-color;
+                }
+            }
+        }
+    }
+}
+
+
+.contentCreateAccount {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    width: 70%;
+    height: auto;
+    border-radius: 20px;
+    background-color:rgba(0, 0, 0, 0.8);
+    border: gray solid 5px;
+    display: none;
+    padding-top:5em;
+    padding-bottom:5em;
+    /*to hide popup initially*/
+
+
+}
+  
+@media only screen and (max-width: 540px) {
+    .login {
+        margin-top:3em;
+        .empty-left, .empty-right{
+            width: 2%;
+        }
+        .loginSection {
+            width : 100%;
+        }
+    }
+}

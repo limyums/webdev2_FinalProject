@@ -1,0 +1,324 @@
+html {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+body {
+  background-color: #EaE7DC;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #665e5e;
+}
+
+header {
+  padding: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #EaE7DC;
+  border-radius: 0.5em;
+  background-color: #E85A4F;
+  position: relative;
+}
+header #btnAdminLogout {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transform: -50%, -50%;
+  right: 10%;
+  bottom: 30%;
+}
+header #btnAdminLogout:hover {
+  cursor: pointer;
+}
+
+.subTitle {
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+button {
+  background-color: #E98074;
+  color: #EaE7DC;
+  border: 0;
+  border-radius: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #E85A4F;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  cursor: pointer;
+  width: 1.5em;
+  margin-right: 1em;
+}
+
+input[type=radio]:checked {
+  cursor: pointer;
+  accent-color: #E85A4F;
+}
+
+input[type=text],
+input[type=password],
+input[type=number] {
+  cursor: pointer;
+  border: 0;
+  border: 1px solid #D8C3A5;
+  border-radius: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.5em;
+  width: 8em;
+  height: 2em;
+  color: #665e5e;
+}
+
+input[type=text]:focus,
+input[type=password],
+input[type=number]:focus {
+  outline: none !important;
+  border: 2px solid #E85A4F;
+}
+
+select {
+  cursor: pointer;
+  border: 0;
+  border: 1px solid #D8C3A5;
+  border-radius: 0.5em;
+  margin-left: 1em;
+  margin-right: 0.5em;
+  padding: 0.5em;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #665e5e;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+main section {
+  margin-top: 1em;
+}
+main section .newAccount {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+main section .transferWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+}
+main section .transferWrapper .newTransfer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+  border: 1px solid #D8C3A5;
+  border-radius: 0.5em;
+  padding: 2em;
+}
+main section .transferWrapper .newTransfer .radioWrap {
+  display: flex;
+}
+main section .transferWrapper .newTransfer .transferInput {
+  display: flex;
+}
+main section .transferWrapper .newTransfer .transferInput .from, main section .transferWrapper .newTransfer .transferInput .to {
+  display: none;
+}
+main section .transferWrapper .newTransfer .categoryWrap {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+main section .transferWrapper .newTransfer .categoryWrap .category {
+  display: flex;
+}
+main section .transferWrapper .newTransfer .addTransaction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8em;
+}
+main section .transferWrapper .newTransfer .addTransaction .inputWrapper {
+  display: flex;
+  flex-direction: row;
+}
+main section .transferWrapper .accountSummary {
+  width: 50%;
+}
+main section .transferWrapper .accountSummary .subTitle {
+  padding: 1em;
+  font-size: 1.3em;
+}
+main section .tableWrapper {
+  margin-top: 2em;
+}
+main section .tableWrapper .tableHeader {
+  margin-bottom: 1em;
+  display: flex;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+table tr th {
+  background-color: #E98074;
+  color: #EaE7DC;
+  padding: 0.5em;
+  font-weight: 900;
+}
+table tr td {
+  border: 1px solid #D8C3A5;
+  padding: 0.5em;
+}
+
+.logo {
+  margin-top: 2em;
+  text-align: center;
+}
+.logo img {
+  width: 7em;
+  height: 7em;
+}
+
+#snackbar {
+  display: none;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+@media only screen and (max-width: 540px) {
+  html {
+    width: 375px;
+    margin: 0 auto;
+    padding: 0 auto;
+  }
+  body {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  header {
+    font-size: 18px;
+  }
+  header #btnAdminLogout div {
+    display: none;
+  }
+  button {
+    padding: 0.7em;
+    font-size: 14px;
+  }
+  input[type=text],
+  input[type=number] {
+    width: 6em;
+    height: 1.5em;
+    font-size: 14px;
+    padding: 0.5em;
+  }
+  main {
+    padding: 0;
+  }
+  main section {
+    margin-top: 1em;
+  }
+  main section .newAccount {
+    justify-content: center;
+  }
+  main section .transferWrapper {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  main section .transferWrapper .newTransfer {
+    width: 92%;
+    flex-direction: column;
+    gap: 0.8em;
+    padding: 0.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  main section .transferWrapper .newTransfer .radioWrap {
+    flex-direction: column;
+  }
+  main section .transferWrapper .newTransfer .transferInput {
+    justify-content: center;
+  }
+  main section .transferWrapper .newTransfer .categoryWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+  main section .transferWrapper .newTransfer .categoryWrap .category {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  main section .transferWrapper .newTransfer .categoryWrap .newCategory {
+    display: none;
+  }
+  main section .transferWrapper .newTransfer .addTransaction {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+  }
+  main section .transferWrapper .accountSummary {
+    width: 100%;
+  }
+  main section .transferWrapper .accountSummary .subTitle {
+    text-align: center;
+    font-size: 14px;
+  }
+  main section .tableWrapper {
+    margin-top: 0;
+  }
+  main section .tableWrapper .tableHeader {
+    justify-content: center;
+    align-items: center;
+  }
+  table {
+    width: 100%;
+    text-align: center;
+  }
+  table tr .hidden_mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=index.css.map */
